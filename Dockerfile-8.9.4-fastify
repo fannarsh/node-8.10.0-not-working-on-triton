@@ -1,0 +1,12 @@
+FROM node:8.9.4-alpine
+
+RUN apk add --no-cache curl
+
+WORKDIR /app
+
+RUN npm install --production --no-optional fastify
+COPY *.js /app/
+
+EXPOSE 3000
+
+CMD [ "node", "fastify-example.js" ]
