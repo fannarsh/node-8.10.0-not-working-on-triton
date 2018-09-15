@@ -4,7 +4,7 @@ RUN apk add --no-cache curl
 
 WORKDIR /app
 
-RUN npm install --production --no-optional fastify
+RUN npm install --production --no-optional fastify@1.11.2
 COPY *.js /app/
 
 EXPOSE 3000
